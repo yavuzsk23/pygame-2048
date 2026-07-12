@@ -107,3 +107,6 @@ class Game2048:
 
 if __name__ == "__main__":
     Game2048().run()
+
+# Project: 2048 Game by Yavuz
+
