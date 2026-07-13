@@ -53,3 +53,27 @@ python game2048.py
 - Pygame
 
 ---
+
+## 🇹🇷 Türkçe
+
+Python ve Pygame ile yazılmış, klasik 2048 bulmaca oyununun sade bir uygulaması.
+
+### Özellikler
+- 4x4 oyun tahtası, klasik 2048 renk paleti
+- Kaydırma + birleştirme mantığı (yukarı/aşağı/sol/sağ)
+- Her hamlede rastgele yeni sayı ekleme (2 veya 4)
+
+### Kurulum ve Çalıştırma
+bash
+pip install pygame
+python game2048.py
+
+
+### Kontroller
+| Tuş | İşlev |
+|---|---|
+| ↑ ↓ ← → | Taşları kaydır |
+
+### Gereksinimler
+- Python 3.8+
+- Pygame
