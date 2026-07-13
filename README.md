@@ -1,7 +1,5 @@
 # 2048 Game
 
-A simple, clean implementation of the classic 2048 puzzle game built with Python and Pygame.
-
 ---
 
 ## 🇬🇧 English
@@ -29,4 +27,29 @@ python game2048.py
 - Pygame
 
   ---
+  
+## 🇩🇪 Deutsch
 
+Eine einfache, saubere Umsetzung des klassischen 2048-Puzzlespiels mit Python und Pygame.
+
+### Funktionen
+- 4x4-Spielbrett mit klassischer 2048-Farbpalette
+- Verschiebe- und Zusammenführungslogik (oben/unten/links/rechts)
+- Bei jedem Zug wird eine neue Zufallszahl hinzugefügt (2 oder 4)
+
+### Installation und Ausführung
+bash
+pip install pygame
+python game2048.py
+
+
+### Steuerung
+| Taste | Funktion |
+|---|---|
+| ↑ ↓ ← → | Kacheln verschieben |
+
+### Voraussetzungen
+- Python 3.8+
+- Pygame
+
+---
