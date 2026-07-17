@@ -9,7 +9,7 @@ A polished Python + Pygame implementation of the classic 2048 puzzle game, featu
 ## 🇬🇧 English
 
 ### Overview
-Cyberia 2048 is a from-scratch recreation of the classic sliding tile puzzle, built with Python's Pygame library. Beyond the core game logic, it includes a proper game loop with animated transitions, live scoring, and win/lose states.
+2048 is a from-scratch recreation of the classic sliding tile puzzle, built with Python's Pygame library. Beyond the core game logic, it includes a proper game loop with animated transitions, live scoring, and win/lose states.
 
 ### Features
 - 4×4 grid with the classic 2048 color palette
@@ -22,7 +22,7 @@ Cyberia 2048 is a from-scratch recreation of the classic sliding tile puzzle, bu
 ### Installation
 ```bash
 pip install pygame
-python cyberia_2048.py
+python 2048.py
 ```
 
 ### Requirements
@@ -38,11 +38,51 @@ python cyberia_2048.py
 
 ### Project Structure
 ```
-cyberia_2048.py   # single-file game: logic, rendering, and main loop
+2048.py   # single-file game: logic, rendering, and main loop
 ```
 
 ### How It Works
 Each move is computed as a set of tile transitions (start position → end position), which the renderer interpolates over ~130ms to produce the slide animation. Score increases by the value of every merged tile, matching the scoring rules of the original 2048.
+
+---
+
+## 🇩🇪 Deutsch
+
+### Überblick
+2048 ist eine vollständige Neuimplementierung des klassischen Schiebe-Puzzles mit Python und der Pygame-Bibliothek. Neben der reinen Spiellogik enthält es eine animierte Spielschleife, eine Live-Punkteanzeige sowie Sieg- und Niederlage-Zustände.
+
+### Funktionen
+- 4×4-Spielfeld mit der klassischen 2048-Farbpalette
+- Flüssige Verschiebe-Animation bei jedem Zug (Kacheln gleiten statt zu springen)
+- Live-Punktestand + Session-Highscore
+- Sieg-Bildschirm mit Konfetti-Animation beim Erreichen der 2048-Kachel — das Spiel kann danach fortgesetzt werden
+- Erkennung des Spielendes (kein leeres Feld und keine möglichen Zusammenführungen mehr)
+- Jederzeit neu starten
+
+### Installation
+bash
+pip install pygame
+python 2048.py
+
+
+### Voraussetzungen
+- Python 3.8+
+- Pygame
+
+### Steuerung
+| Taste | Aktion |
+|---|---|
+| ↑ ↓ ← → | Kacheln bewegen / zusammenführen |
+| R | Spiel neu starten |
+| Leertaste | Nach Erreichen von 2048 weiterspielen |
+
+### Projektstruktur
+
+2048.py   # Einzeldatei-Spiel: Logik, Rendering und Hauptschleife
+
+
+### Funktionsweise
+Jeder Zug wird als eine Reihe von Kachelbewegungen (Startposition → Zielposition) berechnet, die beim Rendern über ca. 130ms interpoliert werden, um die Gleitanimation zu erzeugen. Der Punktestand erhöht sich um den Wert jeder zusammengeführten Kachel, entsprechend den Regeln des Original-2048.
 
 ---
 
