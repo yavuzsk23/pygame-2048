@@ -1,79 +1,48 @@
-# 2048 Game
+# 2048
+
+A polished Python + Pygame implementation of the classic 2048 puzzle game, featuring smooth tile-slide animations, score tracking, a win celebration with confetti, and a game-over screen.
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Pygame](https://img.shields.io/badge/Pygame-2.x-green) ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
 
 ## 🇬🇧 English
 
-A simple, clean implementation of the classic 2048 puzzle game built with Python and Pygame.
+### Overview
+Cyberia 2048 is a from-scratch recreation of the classic sliding tile puzzle, built with Python's Pygame library. Beyond the core game logic, it includes a proper game loop with animated transitions, live scoring, and win/lose states.
 
 ### Features
-- 4x4 game grid with the classic 2048 color palette
-- Slide-and-merge logic (up/down/left/right)
-- Random new tile (2 or 4) added after every valid move
+- 4×4 grid with the classic 2048 color palette
+- Smooth sliding animation for every move (tiles glide to their new position instead of jumping)
+- Live score tracking + session high score
+- Win screen with a confetti celebration when reaching the 2048 tile — play continues afterward if desired
+- Game-over detection (no empty cells and no possible merges)
+- Instant restart at any time
 
-### Installation and Running
+### Installation
 ```bash
 pip install pygame
-python game2048.py
+python cyberia_2048.py
 ```
-
-### Controls
-| Key | Action |
-|---|---|
-| ↑ ↓ ← → | Slide tiles |
 
 ### Requirements
 - Python 3.8+
 - Pygame
 
-  ---
-  
-## 🇩🇪 Deutsch
-
-Eine einfache, saubere Umsetzung des klassischen 2048-Puzzlespiels mit Python und Pygame.
-
-### Funktionen
-- 4x4-Spielbrett mit klassischer 2048-Farbpalette
-- Verschiebe- und Zusammenführungslogik (oben/unten/links/rechts)
-- Bei jedem Zug wird eine neue Zufallszahl hinzugefügt (2 oder 4)
-
-### Installation und Ausführung
-bash
-pip install pygame
-python game2048.py
-
-
-### Steuerung
-| Taste | Funktion |
+### Controls
+| Key | Action |
 |---|---|
-| ↑ ↓ ← → | Kacheln verschieben |
+| ↑ ↓ ← → | Move / merge tiles |
+| `R` | Restart the game |
+| `Space` | Continue playing after reaching 2048 |
 
-### Voraussetzungen
-- Python 3.8+
-- Pygame
+### Project Structure
+```
+cyberia_2048.py   # single-file game: logic, rendering, and main loop
+```
+
+### How It Works
+Each move is computed as a set of tile transitions (start position → end position), which the renderer interpolates over ~130ms to produce the slide animation. Score increases by the value of every merged tile, matching the scoring rules of the original 2048.
 
 ---
 
-## 🇹🇷 Türkçe
-
-Python ve Pygame ile yazılmış, klasik 2048 bulmaca oyununun sade bir uygulaması.
-
-### Özellikler
-- 4x4 oyun tahtası, klasik 2048 renk paleti
-- Kaydırma + birleştirme mantığı (yukarı/aşağı/sol/sağ)
-- Her hamlede rastgele yeni sayı ekleme (2 veya 4)
-
-### Kurulum ve Çalıştırma
-bash
-pip install pygame
-python game2048.py
-
-
-### Kontroller
-| Tuş | İşlev |
-|---|---|
-| ↑ ↓ ← → | Taşları kaydır |
-
-### Gereksinimler
-- Python 3.8+
-- Pygame
