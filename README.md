@@ -86,3 +86,40 @@ Jeder Zug wird als eine Reihe von Kachelbewegungen (Startposition → Zielpositi
 
 ---
 
+## 🇹🇷 Türkçe
+
+### Genel Bakış
+2048, klasik kayan taş bulmacasının Python ve Pygame kütüphanesiyle sıfırdan yazılmış, cilalı bir versiyonudur. Temel oyun mantığının ötesinde; animasyonlu geçişler, canlı skor takibi ve kazanma/kaybetme durumları içerir.
+
+### Özellikler
+- Klasik 2048 renk paletiyle 4×4 oyun tahtası
+- Her hamlede akıcı kaydırma animasyonu (taşlar zıplamak yerine yeni konumlarına kayar)
+- Canlı skor takibi + oturum içi en yüksek skor
+- 2048 taşına ulaşınca konfeti efektli kazanma ekranı — istenirse oyuna devam edilebilir
+- Oyun bitişi tespiti (boş hücre kalmadığında ve birleşme imkanı olmadığında)
+- İstenilen anda anında yeniden başlatma
+
+### Kurulum
+bash
+pip install pygame
+python 2048.py
+
+
+### Gereksinimler
+- Python 3.8+
+- Pygame
+
+### Kontroller
+| Tuş | İşlev |
+|---|---|
+| ↑ ↓ ← → | Taşları hareket ettir / birleştir |
+| R | Oyunu yeniden başlat |
+| Boşluk | 2048'e ulaştıktan sonra oyuna devam et |
+
+### Proje Yapısı
+
+2048.py   # Tek dosyalık oyun: mantık, çizim ve ana döngü
+
+
+### Nasıl Çalışır
+Her hamle, taşların başlangıç ve bitiş konumlarını içeren bir hareket listesi olarak hesaplanır; bu liste render sırasında ~130ms boyunca enterpolasyonla çizilerek kaydırma animasyonunu oluşturur. Skor, orijinal 2048'in kurallarına uygun şekilde, birleşen her taşın değeri kadar artar.
